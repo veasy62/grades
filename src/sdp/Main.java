@@ -14,8 +14,41 @@ public class Main {
   }
 
   private static String processGrades(Scanner scanner) {
-
-    return null;
+      int courseTotal = 0;
+      double curr_gpa = 0;
+      double gpa_total = 0;
+      String grade;
+      while(scanner.hasNextLine()){
+          scanner.next();
+          scanner.next();
+          grade = scanner.next();
+          if (grade.equals("A")){
+              gpa_total = gpa_total + 4;}
+          else if (grade.equals("A-")){
+              gpa_total = gpa_total + 3.67;}
+          else if (grade.equals("B+")){
+              gpa_total = gpa_total + 3.33;}
+          else if (grade.equals("B")){
+              gpa_total = gpa_total + 3.00;}
+          else if (grade.equals("B-")){
+              gpa_total = gpa_total + 2.67;}
+          else if (grade.equals("C+")){
+              gpa_total = gpa_total + 2.33;}
+          else if (grade.equals("C")){
+              gpa_total = gpa_total + 2.00;}
+          else if (grade.equals("C-")){
+              gpa_total = gpa_total + 1.67;}
+          else if (grade.equals("D+")){
+              gpa_total = gpa_total + 1.33;}
+          else if (grade.equals("D")){
+              gpa_total = gpa_total + 1.00;}
+          else if (grade.equals("F")){
+               }
+          courseTotal++;
+          scanner.nextLine();
+      }
+      String str = Integer.toString(courseTotal);
+      return("Course:" + str +"\n"+"GPA:" + "\n");
   }
 
   @Test
